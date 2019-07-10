@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Civil Unions";
+}
+
+@model List<WeddingPlanner.Models.Wedding>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Wedding</th>
+                        <th>Date</th>
+                        <th># of Guests</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var wedding in Model)
+                    {
+                        <tr>
+                            <td>
+                                <a href="/weddings/@wedding.WeddingId" class="text-dark">
+                                    @wedding.Wedder &amp; @wedding.Victim
+                                </a>
+                            </td>
+                            <td>
+                                @wedding.WeddingDate.ToString("MMM dd, yyyy")
+                            </td>
+                            <td>
+                                @wedding.GuestList.Count()
+                            </td>
+                            <td>
+                                @if (wedding.UserId == ViewBag.UserId)
+                                {
+                                    <a href="/weddings/@wedding.WeddingId/delete">Delete</a>
+                                }
+                                else if (wedding.GuestList.Exists(x => x.UserId == ViewBag.UserId))
+                                {
+                                    <a href="/weddings/@wedding.WeddingId/unrsvp">un-RSVP</a>
+                                }
+                                else
+                                {
+                                    <a href="/weddings/@wedding.WeddingId/rsvp">RSVP</a>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

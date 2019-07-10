@@ -1,0 +1,78 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-image: url('/img/background1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: -100px -100px; 
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+h1.navbar-brand {
+  font: bold 36px 'Indie Flower', cursive;
+}
+
+.table {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.names {
+  font: bold 48px "Segoe Script", cursive;
+}

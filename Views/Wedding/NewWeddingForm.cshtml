@@ -1,0 +1,40 @@
+@{
+
+    ViewData["Title"] = "Plan New Civil Unions";
+}
+
+@model WeddingPlanner.Models.Wedding
+
+<div class="container">
+    <div class="row">
+        <div class="col-5">
+            <form class="form" action="/weddings/new" method="POST">
+                <div class="form-group">
+                    <span asp-validation-for="Wedder" class="text-danger"></span><br />
+                    <label asp-for="Wedder"></label>
+                    <input asp-for="Wedder" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <span asp-validation-for="Victim" class="text-danger"></span><br />
+                    <label asp-for="Victim"></label>
+                    <input asp-for="Victim" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <span asp-validation-for="WeddingDate" class="text-danger"></span><br />
+                    <label asp-for="WeddingDate"></label>
+                    <input asp-for="WeddingDate" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <span asp-validation-for="Address" class="text-danger"></span><br />
+                    <label asp-for="Address"></label>
+                    <input asp-for="Address" class="form-control" />
+                </div>
+
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </form>
+        </div>
+    </div>
+</div>

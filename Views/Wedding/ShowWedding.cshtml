@@ -1,0 +1,38 @@
+@{
+
+    ViewData["Title"] = "Plan New Civil Unions";
+}
+
+@model WeddingPlanner.Models.Wedding
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="names">@Model.Wedder & @Model.Victim's Wedding</h1>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col ml-2">
+            <h3>
+                Wedding Date: @Model.WeddingDate.ToString("MMM dd, yyyy")
+            </h3>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-4 ml-2">
+            <h4>Guests:</h4>
+            @foreach (var guest in Model.GuestList)
+            {
+                <div>
+                    @guest.User.FirstName @guest.User.LastName
+                </div>
+            }
+        </div>
+        <div class="col-4">
+            <h4>Address:</h4>
+            <p>
+                @Model.Address
+            </p>
+        </div>
+    </div>
+</div>
